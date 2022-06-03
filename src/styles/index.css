@@ -1,0 +1,298 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: #212121;
+
+    box-sizing: border-box;
+}
+
+body {margin: 0}
+
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-color: #efefef;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0, .1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.game-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 30px 0 0 0;
+    border: 0;
+
+    font-size: 30px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.game-settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 30px;
+    border: 0;
+}
+
+.game-dificuldade {
+    display: block;
+
+    width: 150px;
+    height: 40px;
+
+    margin: 0 10px 0 0;
+    padding: 0 10px;
+    border: 2px solid #49d893;
+
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+}
+
+.game-restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 40px;
+
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+
+    background-color: #49d893;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    font-weight: 600px;
+    color: #ffffff;
+}
+
+.game-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.game-map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.game-map-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.game-map-collum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-size: 22px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* fechado */
+.game-map-row:nth-child(2n) .game-map-collum:not(.aberto):nth-child(2n + 1),
+.game-map-row:nth-child(2n + 1) .game-map-collum:not(.aberto):nth-child(2n) {
+    background-color: #a2d149;
+}
+.game-map-row:nth-child(2n) .game-map-collum:not(.aberto):nth-child(2n),
+.game-map-row:nth-child(2n + 1) .game-map-collum:not(.aberto):nth-child(2n + 1) {
+    background-color: #aad752;
+}
+
+/* aberto */
+.game-map-row:nth-child(2n) .game-map-collum.aberto:nth-child(2n),
+.game-map-row:nth-child(2n + 1) .game-map-collum.aberto:nth-child(2n + 1) {
+    background-color: #e6c1a0;
+}
+.game-map-row:nth-child(2n) .game-map-collum.aberto:nth-child(2n + 1),
+.game-map-row:nth-child(2n + 1) .game-map-collum.aberto:nth-child(2n) {
+    background-color: #d7b899;
+}
+
+.game-map-collum:hover {
+    filter:brightness(0.9);
+}
+
+.game-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-color: rgba(0,0,0, .5);
+}
+.game-modal.aberto {display: flex;}
+
+.game-modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
+    overflow: hidden;
+}
+
+.game-modal-box h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100px;
+
+    margin: 0;
+
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.game-modal-box .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 50px 100px;
+    border: 0;
+}
+
+.game-modal-box h3.ganhou {
+    background-color: #49d893;
+}
+
+.game-modal-box h3.perdeu {
+    background-color: #d84949;
+}
+
+.game-modal-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 40px;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    border-radius: 5px;
+    background-color: transparent;
+
+    color: #212121;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+}
+
+.game-modal-box button:hover {
+    background-color: #f0f0f0;
+}
