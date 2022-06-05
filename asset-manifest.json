@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/campo-minado/static/css/main.ee275623.css",
-    "main.js": "/campo-minado/static/js/main.7273293e.js",
+    "main.js": "/campo-minado/static/js/main.cc4db808.js",
     "static/js/787.82316a22.chunk.js": "/campo-minado/static/js/787.82316a22.chunk.js",
     "index.html": "/campo-minado/index.html",
     "main.ee275623.css.map": "/campo-minado/static/css/main.ee275623.css.map",
-    "main.7273293e.js.map": "/campo-minado/static/js/main.7273293e.js.map",
+    "main.cc4db808.js.map": "/campo-minado/static/js/main.cc4db808.js.map",
     "787.82316a22.chunk.js.map": "/campo-minado/static/js/787.82316a22.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee275623.css",
-    "static/js/main.7273293e.js"
+    "static/js/main.cc4db808.js"
   ]
 }
